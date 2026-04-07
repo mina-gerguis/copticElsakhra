@@ -1,0 +1,134 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeIn .2s ease;
+}
+
+.modal {
+    width: 450px;
+    max-width: 92%;
+    max-height: 50vh;
+    background: var(--modalSearchBg);
+    border-radius: var(--br-sm);
+    padding: var(--pa-md);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, .25);
+    display: flex;
+    flex-direction: column;
+    animation: pop .22s ease;
+    font-family: "Cairo", sans-serif;
+}
+
+.inputWrap {
+    display: flex;
+    align-items: center;
+    padding: 0 var(--pa-sm);
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--buttonBorder);
+}
+
+.input {
+    width: 100%;
+    height: 48px;
+    border: none;
+    background: none;
+    padding: 0 10px;
+    font-size: 16px;
+    outline: none;
+    font-family: "Cairo", sans-serif;
+}
+
+.searchIcon {
+    opacity: .6;
+    color: var(--themeEl);
+    margin-left: 2px;
+}
+
+.results {
+    overflow: auto;
+}
+
+.results::-webkit-scrollbar {
+    width: 8px;
+}
+
+.results::-webkit-scrollbar-track {
+    background: var(--mutedColor);
+    border-radius: 2px;
+}
+
+.results::-webkit-scrollbar-thumb {
+    background: var(--themeEl);
+    border-radius: 2px;
+}
+
+.category {
+    margin-bottom: 16px;
+}
+
+.catTitle {
+    font-size: var(--fs-md);
+    color: var(--mutedColor);
+    margin-bottom: 8px;
+
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: right;
+    padding: 10px 12px;
+    border-radius: var(--br-sm);
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: .18s;
+    font-size: var(--fs-sm);
+    font-family: "Cairo", sans-serif;
+    color: var(--themeEl);
+}
+
+.item:hover {
+    background-color: var(--navColorHover);
+}
+
+.icon {
+    margin-left: 8px;
+    font-size: 10px;
+    color: var(--mainColor);
+}
+
+.empty {
+    text-align: center;
+    padding: 20px;
+    color: var(--mutedColor);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes pop {
+    from {
+        transform: scale(.96);
+        opacity: .6
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
