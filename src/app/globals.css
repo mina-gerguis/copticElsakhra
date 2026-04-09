@@ -82,6 +82,7 @@ button {
   --space-xl: 2.5rem; /* 40px */
   --space-2xl: 3rem; /* 48px */
   --space-3xl: 4rem; /* 64px */
+  --space-4xl: 5rem; /* 80px */
 }
 
 body {

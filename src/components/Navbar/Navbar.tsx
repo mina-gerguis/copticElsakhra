@@ -7,7 +7,6 @@ import styles from "./Navbar.module.css";
 import SearchButton from "../Search/SearchButton";
 import { useTheme } from "@/lib/ThemeContext";
 import { BsBook, BsJournalText, BsPlayCircle, BsPencilSquare, BsLifePreserver } from "react-icons/bs";
-import { Button } from "@/components/ui/button"
 
 const navItems = [
     { label: "الكتاب المقدّس", href: "/products", icon: <BsBook /> },
@@ -64,20 +63,26 @@ export default function Navbar() {
                             <button onClick={toggleTheme} className={styles.themeToggle}>
                                 {theme === "dark" ? <BsSun /> : <BsHighlights />}
                             </button>
+                            <span className={styles.dot}>|</span>
                             <div className={styles.desktopSearchButton}>
                                 <SearchButton />
                             </div>
                         </div>
-                        <button
+                        <div
                             className={`${styles.hamburger} ${mobileOpen ? styles.hamburgerOpen : ""}`}
                             onClick={() => setMobileOpen((prev) => !prev)}
                             aria-label={mobileOpen ? "إغلاق القائمة" : "فتح القائمة"}
                             aria-expanded={mobileOpen}
                         >
-                            <span className={styles.hamburgerLine} />
-                            <span className={styles.hamburgerLine} />
-                            <span className={styles.hamburgerLine} />
-                        </button>
+                            <div className={styles.hamburgerLines}>
+                                <span className={styles.hamburgerLine} />
+                                <span className={styles.hamburgerLine} />
+                                <span className={styles.hamburgerLine} />
+                            </div>
+                            <div className={styles.menuText}>
+                                <p>MENU</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -112,7 +117,7 @@ export default function Navbar() {
                         </li>
                     ))}
                     <div className={styles.mobileSearchButton}>
-                        <SearchButton/>
+                        <SearchButton />
                     </div>
                 </ul>
             </div>
