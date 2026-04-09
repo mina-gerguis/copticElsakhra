@@ -99,7 +99,7 @@ export default function SearchOverlay({ open, onClose }: Props) {
                     className={styles.item}
                     onClick={() => go(item.path)}
                   >
-                    <span className={styles.icon}><Icon size={18} /></span>
+                    <span className={styles.icon}><Icon/></span>
                     <span>{item.title}</span>
                   </button>
                 )

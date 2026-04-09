@@ -13,10 +13,10 @@
 .modal {
     width: 450px;
     max-width: 92%;
-    max-height: 50vh;
+    height: 70vh;
     background: var(--modalSearchBg);
-    border-radius: var(--br-sm);
-    padding: var(--pa-md);
+    border-radius: var(--br-8);
+    padding: var(--pd-16);
     box-shadow: 0 30px 80px rgba(0, 0, 0, .25);
     display: flex;
     flex-direction: column;
@@ -27,19 +27,19 @@
 .inputWrap {
     display: flex;
     align-items: center;
-    padding: 0 var(--pa-sm);
-    margin-bottom: 12px;
-    border-radius: 8px;
+    padding: 0 var(--pd-16);
+    margin-bottom: var(--mg-16);
+    border-radius: var(--br-8);
     border: 1px solid var(--buttonBorder);
 }
 
 .input {
     width: 100%;
-    height: 48px;
+    height: var(--height-40);
     border: none;
     background: none;
-    padding: 0 10px;
-    font-size: 16px;
+    padding: 0 var(--pd-12);
+    font-size: var(--fs-16);
     outline: none;
     font-family: "Cairo", sans-serif;
 }
@@ -76,21 +76,18 @@
     font-size: var(--fs-md);
     color: var(--mutedColor);
     margin-bottom: 8px;
-
 }
 
 .item {
     display: flex;
-    align-items: center;
     width: 100%;
-    text-align: right;
     padding: 10px 12px;
-    border-radius: var(--br-sm);
+    border-radius: var(--br-4);
     border: none;
     background: none;
     cursor: pointer;
     transition: .18s;
-    font-size: var(--fs-sm);
+    font-size: var(--fs-16);
     font-family: "Cairo", sans-serif;
     color: var(--themeEl);
 }
@@ -100,8 +97,8 @@
 }
 
 .icon {
-    margin-left: 8px;
-    font-size: 10px;
+    font-size: var(--fs-20);
+    margin-left: var(--mg-8);
     color: var(--mainColor);
 }
 
