@@ -7,6 +7,7 @@ import styles from "./Navbar.module.css";
 import SearchButton from "../Search/SearchButton";
 import { useTheme } from "@/lib/ThemeContext";
 import { BsBook, BsJournalText, BsPlayCircle, BsPencilSquare, BsLifePreserver } from "react-icons/bs";
+import { Button } from "@/components/ui/button"
 
 const navItems = [
     { label: "الكتاب المقدّس", href: "/products", icon: <BsBook /> },

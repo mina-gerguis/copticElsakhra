@@ -44,57 +44,23 @@ button {
 
 /* Font */
 @font-face {
-  font-family: 'BIGX';
-  src: url('../../public/fonts/BIGX.otf') format('opentype');
+  font-family: "BIGX";
+  src: url("../../public/fonts/BIGX.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'Cairo';
-  src: url('../../public/fonts/Cairo.ttf') format('truetype');
+  font-family: "Cairo";
+  src: url("../../public/fonts/Cairo.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Plus';
-  src: url('../../public/fonts/PlusJakartaSans.ttf') format('truetype');
+  font-family: "Plus";
+  src: url("../../public/fonts/PlusJakartaSans.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Tajawal';
-  src: url('../../public/fonts/Tajawal.ttf') format('truetype');
-}
-
-
-
-
-
-.ar-font {
-  font-family: 'Cairo', sans-serif;
-  direction: rtl;
-}
-
-.en-font {
-  font-family: 'Plus', sans-serif;
-  direction: ltr;
-}
-
-.title-ar {
-  font-family: "Cairo", sans-serif;
-}
-
-.title-en {
-  font-family: "Playfair Display", sans-serif;
-}
-
-.but-ar {
-  font-family: "Cairo", sans-serif;
-}
-
-.mainTitle-en {
-  font-family: "Xeroda", sans-serif;
-}
-
-.mainTitle-ar {
-  font-family: "TheYearofHandicrafts", sans-serif;
+  font-family: "Tajawal";
+  src: url("../../public/fonts/Tajawal.ttf") format("truetype");
 }
 
 :root {
@@ -106,68 +72,53 @@ button {
   --blue: hsl(240, 100%, 50%);
   --white: white;
 
-  /* PADDING */
-  --pa-sm: 8px;
-  --pa-md: 16px;
-  --pa-lg: 24px;
-  --pa-btn: 5px 9px;
-  /* BORDER RADIUS */
-  --br-sm: 0.875rem;
-  --br-md: 1rem;
-  --br-lg: 1.125rem;
-  /* FONT SIZE */
-  --fs-sm: 0.875rem;
-  --fs-md: 1rem;
-  --fs-lg: 1.125rem;
-  --fs-xl: 1.25rem;
-  --fs-2xl: 1.5rem;
-  --fs-3xl: 2rem;
-  --fs-4xl: 2.5rem;
-
-  --space-xs: 0.4rem;
-  --space-sm: 0.8rem;
-  --space-md: 1.6rem;
-  --space-lg: 2.4rem;
-  --space-xl: 3.2rem;
-  --space-2xl: 4rem;
+  /*! SPACES SIZE */
+  --space-xxxs: 0.125rem; /* 2px (اختياري) */
+  --space-xxs: 0.25rem; /* 4px (اختياري) */
+  --space-xs: 0.5rem; /* 8px */
+  --space-sm: 1rem; /* 16px */
+  --space-md: 1.5rem; /* 24px */
+  --space-lg: 2rem; /* 32px */
+  --space-xl: 2.5rem; /* 40px */
+  --space-2xl: 3rem; /* 48px */
+  --space-3xl: 4rem; /* 64px */
 }
 
 body {
-  --mainColor: rgb(0, 123, 255);
-  --themeBg: hsl(0, 0%, 100%);
+  --themeBg: hsl(0, 0%, 98%);
   --themeEl: hsl(0, 0%, 0%);
+  --mainColor: rgb(0, 123, 255);
   --mutedColor: hsl(0, 0%, 28%);
-  /* navbar color */
+  /* ! Navbar color */
+  --navBg: hsl(0, 0%, 100%);
   --navColor: rgb(0, 122, 255);
   --navColorHover: rgb(244, 244, 248);
   --navMobileBg: #f4f4f8;
   --navOverlay: rgba(177, 177, 177, 0.4);
-  /* Search Bar */
+  /* ! Search Bar */
   --modalSearchBg: hsl(0, 0%, 100%);
-
+  /* ! Border */
   --borderColor: hsla(223, 84%, 5%, 0.103);
+  /* ! Box Shadow */
+  --box-shadow-v1: 0 10px 30px rgba(0, 0, 0, 0.15);
+
   --buttonBorder: hsla(0, 0%, 1%, 0.247);
   --searchColor: hsl(0, 0%, 28%);
-  --inputButton: rgba(255, 255, 255, .7);
-
-
+  --inputButton: rgba(255, 255, 255, 0.7);
 
   --accent: hsl(211, 100%, 50%);
   --hover-color: hsla(213, 14%, 52%, 0.102);
-  --navBg: hsla(0, 0%, 98%, 0.451);
   --brBg: 1px solid rgba(0, 0, 0, 0.15);
   --bsBg: 0 10px 30px rgba(0, 0, 0, 0.15);
 
-
-
   --span: #0004ff;
-  --button: #007AFF;
+  --button: #007aff;
   --border: hsla(223, 84%, 5%, 0.103);
   --color-muted-3: #e7e7e7;
   --color-muted-4: #000000;
   --glass-background: #fafafa73;
   --glass-border: rgba(133, 133, 133, 0.589);
-  --card-color: rgba(0, 0, 0, 0.0);
+  --card-color: rgba(0, 0, 0, 0);
   --card-border: rgba(194, 194, 194, 0.589);
   --card-hover: #0070f31a;
   --container-color: #f0f1ff;
@@ -189,19 +140,13 @@ body.dark {
   /* Search Bar */
   --modalSearchBg: hsl(240, 100%, 5%);
 
-
   --buttonBorder: hsla(0, 0%, 55%, 0.39);
 
   --inputButton: rgb(236, 6, 6);
   --searchColor: hsl(0, 0%, 100%);
 
-
-
   --inputButton: hsla(0, 6%, 28%, 0.322);
   --inputButton-border: hsl(0, 4%, 26%);
-
-
-
 
   --accent: hsl(61, 100%, 50%);
   --hover-color: hsla(229, 5%, 55%, 0.255);
@@ -221,4 +166,12 @@ body.dark {
   --container-color: #05050c;
   --card-linear: linear-gradient(to left top, #000000c4, #001130);
   --text-gradient: linear-gradient(90deg, rgb(160, 158, 158), rgb(59, 59, 59));
+}
+
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }
