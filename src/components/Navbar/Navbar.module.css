@@ -132,7 +132,7 @@
 
 .dot {
     color: var(--buttonBorder);
-    margin-left: var(--space-xs);
+    margin: 0 var(--space-xxs);
 }
 
 /* ? Hamburger */
@@ -425,6 +425,7 @@
     }
 
     .themeToggle {
+        background-color: var(--borderColor);
         width: 34px;
         padding: 15.5px 0;
     }
