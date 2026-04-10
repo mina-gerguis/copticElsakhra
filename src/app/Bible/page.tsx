@@ -7,6 +7,7 @@ import Link from "next/link";
 import { GrAppsRounded } from "react-icons/gr";
 
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 
 const oldBooks = [
@@ -115,6 +116,8 @@ function BiblePage() {
                                     alt={book.name}
                                     width={200}
                                     height={200}
+                                    blurDataURL="data:image/jpeg;base64,..."
+                                    placeholder="blur"
                                 />
                             </Link>
                         ))}
@@ -143,7 +146,9 @@ function BiblePage() {
                                     src={`/assets/Bible/newCover/${book.img}`}
                                     alt={book.name}
                                     width={200}
-                                    height={200} 
+                                    height={200}
+                                    blurDataURL="data:image/jpeg;base64,..."
+                                    placeholder="blur"
                                 />
                             </Link>
                         ))}
@@ -152,6 +157,7 @@ function BiblePage() {
 
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
