@@ -6,14 +6,13 @@ import { BsHighlights, BsSun } from "react-icons/bs";
 import styles from "./Navbar.module.css";
 import SearchButton from "../Search/SearchButton";
 import { useTheme } from "@/lib/ThemeContext";
-import { BsBook, BsJournalText, BsPlayCircle, BsPencilSquare, BsLifePreserver } from "react-icons/bs";
 
 const navItems = [
-    { label: "الكتاب المقدّس", href: "/Bible", icon: <BsBook /> },
-    { label: "الاجبية", href: "/services", icon: <BsJournalText /> },
-    { label: "الميديا", href: "/blog", icon: <BsPlayCircle /> },
-    { label: "المدونة", href: "/about", icon: <BsPencilSquare /> },
-    { label: "مركز المساعدة", href: "/contact", icon: <BsLifePreserver /> },
+    { label: "الكتاب المقدّس", href: "/Bible", icon: "📚" },
+    { label: "الاجبية", href: "/services", icon: "✝️" },
+    { label: "الميديا", href: "/blog", icon: "📺" },
+    { label: "المدونة", href: "/about", icon: "📝" },
+    { label: "مركز المساعدة", href: "/contact", icon: "❓" },
 ];
 
 export default function Navbar() {

@@ -5,6 +5,7 @@
     position: sticky;
     bottom: 0;
     width: 100%;
+    margin-top: var(--mg-16);
 }
 
 .container {
@@ -91,29 +92,28 @@
     }
 
     .heading {
-        font-size: 2rem;
+        font-size: var(--fs-32);
     }
 
     .rightSection {
-        gap: 2rem;
+        gap: 0rem;
+    }
+
+    .column {
+        min-width: auto;
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
     .footer {
-        padding: 2rem;
+        padding: var(--pd-32);
     }
 
     .heading {
-        font-size: 1.5rem;
-    }
-
-    .trialButton {
-        padding: .8rem 1.5rem;
-        font-size: 0.7rem;
+        font-size: var(--fs-24);
     }
 
     .copyright {
-        font-size: 16px;
+        font-size: var(--fs-16);
     }
 }
