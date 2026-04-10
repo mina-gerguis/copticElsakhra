@@ -1,0 +1,665 @@
+<!--===============================================================
+    * الكتاب المقدس الانجيل *
+    - Link Page : site/data/Bible/bible.html
+    - Subject : Null
+    - Update Date : 2024/10/25
+    - Image : Yes   |   - Link : Yes 
+===============================================================-->
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <!--===== Meta Element =====-->
+    <meta charset="UTF-8">
+    <meta name="copyright" content="Team Coptic Elsakhra">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الكتاب المقدس كتاب يسوع المسيح">
+    <meta name="keywords"
+        content="الكنيسة, المسيحية, المسيح, يسوع, الصخرة, ارحمنا, قبطية, الأرثوذكسية, الكتاب المقدس, المزامير, قداس, قداسات, ترانيم, الحان, صور, خدمة, دين, عبادة, كرازة, افلام مسيحية, قدسين, تراث, كنسي, تعاليم, هيكل, نبؤات, العهد الجديد, العهد القديم, أقباط, مواقع, الخدمة, برامج, البابا، عظات">
+    <meta property="og:title" content="الصخرة">
+    <meta property="og:url" content="https://coptic-elsakhra.web.app">
+    <meta property="og:description" content="الكتاب المقدس كتاب يسوع المسيح">
+    <!--===== Link File Css =====-->
+    <link rel="stylesheet" href="../../assets/css/root.css" type="text/css">
+    <link rel="stylesheet" href="../../assets/css/darkMode.css" type="text/css">
+    <link rel="stylesheet" href="../../assets/css/mainStyle.css" type="text/css">
+    <link rel="stylesheet" href="../../assets/css/bible/mainBible.css" type="text/css">
+    <link rel="stylesheet" href="../../assets/css/animate.css" type="text/css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css" type="text/css">
+    <!--===== Name Website =====-->
+    <title>الانجيل | الكتاب المقدس</title>
+    <!--===== Icon Website =====-->
+    <link rel="icon" href="../../assets/image/png/logo-elsakhra.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div id="lineScroll"></div>
+    <!--===================================
+        Header
+    =====================================-->
+    <!-- Navbar Top -->
+    <div class="navbar" id="navbar">
+        <div class="logo">
+            <a onclick="index()" class="logo_text">الصخرة</a>
+        </div>
+
+        <div class="search">
+            <form>
+                <input class="input" id="searchInput" placeholder="عن ماذا تبحث ...؟" required="" type="text"
+                    onkeyup="search()">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <ul id="results" class="results"></ul>
+            </form>
+        </div>
+
+        <div class="menu-btn" id="menuBtn">
+            <button class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar_navbar">
+        <button id="closeBtn" class="close"><span><i class='bx bx-x'></i></span></button>
+        <h5 class="title-head"><i class="fa-solid fa-file-lines"></i> صفحات الموقع</h5>
+        <a onclick="index()"><i class='bx bxs-quote-left'></i> الصخرة القبطية</a>
+        <a onclick="active()" class="active"><i class="bx bx-book-add icon"></i>الكتاب المقدس</a>
+        <a onclick="agpeya()"><i class="bx bx-book-reader"></i>الاجبية المقدسة</a>
+        <a onclick="media()"><i class="bx bx-movie-play"></i>الميديا المسيحية</a>
+
+        <h5 class="title-head"><i class="fa-solid fa-star"></i> أهم الصفحات</h5>
+        <a onclick="info()"><i class='bx bxs-quote-left'></i> عن الصخرة القبطية</a>
+        <a onclick="donate()"><i class='bx bx-wallet'></i> التبرع للمحتاجين</a>
+        <a onclick="map()"><i class='bx bx-map-alt'></i> خريطة الموقع</a>
+        <a onclick="team()"><i class='bx bx-group'></i> الاضمام إلي الفريق</a>
+        <a onclick="blog()"><i class='bx bx-paperclip'></i>المدونة</a>
+        <a onclick="support()"><i class='bx bx-help-circle'></i> مركز المساعدة</a>
+        <a onclick="newsletter()"><i class='bx bx-envelope'></i> النشرة البريدية</a>
+
+        <h5 class="title-head"><i class="fa-solid fa-star"></i> تفضيلات الموقع</h5>
+        <a id="darkModeBtn"><i class='bx bxs-moon'></i> الوضع المظلم</a>
+        <a id="toggleImages"><i class='bx bxs-image-alt'></i> أخفاء الصور</a>
+        <a id="butClarification"><i class='bx bx-link'></i> توضيح الروابط</a>
+        <a onclick="litePage()"><i class="fa-solid fa-feather"></i> نسخة مخففه</a>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <!-- Navbar Bottom -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="link">
+                <a onclick="newsletter()"><i class="fa-solid fa-envelope"></i></a>
+                <a onclick="indexClick()"><i class='fa-solid fa-house-chimney-user'></i></a>
+                <a onclick="support()"><i class="fa-solid fa-circle-question"></i></a>
+            </div>
+        </div>
+    </header>
+    <!--===================================
+        Bible
+    =====================================-->
+    <main class="bible__page">
+        <section>
+            <div class="bible-header-image animate__animated animate__fadeInDown">
+                <img src="../../assets/image/Bible/bible_bg.jpg">
+            </div>
+
+            <!-- <div class="bible_app animate__animated animate__fadeIn">
+                <div class="title">
+                    <h3>أحصل علي تطبيق الكتاب المقدس</h3>
+                    <h6>أحصل علي تطبيق الكتاب المقدس الذي يعمل بدون اتصال بالانترنت وبعض المزايا فقط هي الني تحتاج إلي
+                        اتصال
+                        بالانترنت أو امسح الرمز واحصل علي الكتاب PDF</h6>
+                </div>
+                <div class="qr_code">
+                    <img src="../../assets/image/Bible/qr-code-bible-pdf.png" alt="Qr Code">
+                    <h6>أمسح للحصول علي الكتاب المقدس</h6>
+                </div>
+                <div class="store">
+                    <a href="">
+                        <img src="../../assets/image/main/play-store.webp">
+                    </a>
+                    <a href="">
+                        <img src="../../assets/image/main/app-store.webp">
+                    </a>
+                </div>
+            </div> -->
+
+            <div class="bible_content animate__animated animate__fadeIn">
+                <div class="bible-header">
+                    <div class="title">
+                        <h3>العهد القديم</h3>
+                        <h6>
+                            عدد الاسفار : <span>46</span>
+                            عدد الأصحاحات : <span>929</span>
+                        </h6>
+                    </div>
+                    <div class="but">
+                        <button id="showAllButtonOld" class="grid"><i class='bx bx-grid'></i></button>
+                    </div>
+                </div>
+                <div class="old">
+                    <div class="container" id="showAllContainerOld">
+                        <!--التكوين-->
+                        <a href="old_bible/التكوين/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/1.jpg" alt="سفر التكوين">
+                            </div>
+                        </a>
+                        <!--الخروج-->
+                        <a href="old_bible/الخروج/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/2.jpg" alt="سفر الخروج">
+                            </div>
+                        </a>
+                        <!--اللاويين-->
+                        <a href="old_bible/اللاويين/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/3.jpg" alt="سفر اللاويين">
+                            </div>
+                        </a>
+                        <!--العدد-->
+                        <a href="old_bible/العدد/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/4.jpg" alt="سفر العدد">
+                            </div>
+                        </a>
+                        <!--التثنية-->
+                        <a href="old_bible/التثنية/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/5.jpg" alt="سفر التثنية">
+                            </div>
+                        </a>
+                        <!--يشوع-->
+                        <a href="old_bible/يشوع/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/6.jpg" alt="سفر يشوع">
+                            </div>
+                        </a>
+                        <!--القضاة-->
+                        <a href="old_bible/القضاة/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/7.jpg" alt="سفر القضاة">
+                            </div>
+                        </a>
+                        <!--راعوث-->
+                        <a href="old_bible/راعوث/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/8.jpg" alt="سفر راعوث">
+                            </div>
+                        </a>
+                        <!--صموئيل الاول-->
+                        <a href="old_bible/صموئيل_الاول/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/9.jpg" alt="سفر صموئيل الاول">
+                            </div>
+                        </a>
+                        <!--صموئيل الثاني-->
+                        <a href="old_bible/صموئيل_الثاني/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/10.jpg" alt="صموئيل الثاني">
+                            </div>
+                        </a>
+                        <!--الملوك الاول-->
+                        <a href="old_bible/الملوك_الاول/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/11.jpg" alt="سفر الملوك الاول">
+                            </div>
+                        </a>
+                        <!--الملوك الثاني-->
+                        <a href="old_bible/الملوك_الثاني/" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/12.jpg" alt="سفر الملوك الثاني">
+                            </div>
+                        </a>
+                        <!--اخبار الايام الاول-->
+                        <a href="old_bible/اخبار_الايام_الاول/" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/13.jpg" alt="سفر أخبار الايام الاول">
+                            </div>
+                        </a>
+                        <!--اخبار الايام الثاني-->
+                        <a href="old_bible/اخبار_الايام_الثاني/" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/14.jpg"
+                                    alt="سفر أخبار الايام الثاني">
+                            </div>
+                        </a>
+                        <!--عزرا-->
+                        <a href="old_bible/عزرا/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/15.jpg" alt="سفر عزرا">
+                            </div>
+                        </a>
+                        <!--نحميا-->
+                        <a href="old_bible/نحميا/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/16.jpg" alt="سفر نحميا">
+                            </div>
+                        </a>
+                        <!--استير-->
+                        <a href="old_bible/أستير/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/17.jpg" alt="سفر أستير">
+                            </div>
+                        </a>
+                        <!--ايوب-->
+                        <a href="old_bible/أيوب/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/18.jpg" alt="سفر أيوب">
+                            </div>
+                        </a>
+                        <!--المزامير-->
+                        <a href="old_bible/المزامير/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/19.jpg" alt="سفر المزامير">
+                            </div>
+                        </a>
+                        <!--الامثال-->
+                        <a href="old_bible/الامثال/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/20.jpg" alt="سفر الامثال">
+                            </div>
+                        </a>
+                        <!--الجامعة-->
+                        <a href="old_bible/الجامعة/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/21.jpg" alt="سفر الجامعة">
+                            </div>
+                        </a>
+                        <!--نشيد الانشاد-->
+                        <a href="old_bible/نشيد_الانشاد/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/22.jpg" alt="سفر نشيد الانشاد">
+                            </div>
+                        </a>
+                        <!--اشعياء-->
+                        <a href="old_bible/اشعياء/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/23.jpg" alt="سفر إشعياء">
+                            </div>
+                        </a>
+                        <!--ارميا-->
+                        <a href="old_bible/ارميا/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/24.jpg" alt="سفر ارميا">
+                            </div>
+                        </a>
+                        <!--مراثي ارميا-->
+                        <a href="old_bible/مراثي_ارميا/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/25.jpg" alt="سفر مراثي ارميا">
+                            </div>
+                        </a>
+                        <!--حزقيال-->
+                        <a href="old_bible/حزقيال/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/26.jpg" alt="سفر حزقيال">
+                            </div>
+                        </a>
+                        <!--دانيال-->
+                        <a href="old_bible/دانيال/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/27.jpg" alt="سفر دانيال">
+                            </div>
+                        </a>
+                        <!--هوشع-->
+                        <a href="old_bible/هوشع/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/28.jpg" alt="سفر هوشع">
+                            </div>
+                        </a>
+                        <!--يوئيل-->
+                        <a href="old_bible/يوئيل/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/29.jpg" alt="سفر يوئيل">
+                            </div>
+                        </a>
+                        <!--عاموس-->
+                        <a href="old_bible/عاموس/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/30.jpg" alt="سفر عاموس">
+                            </div>
+                        </a>
+                        <!--عوبديا-->
+                        <a href="old_bible/عوبديا/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/31.jpg" alt="سفر عوبديا">
+                            </div>
+                        </a>
+                        <!--ميخا-->
+                        <a href="old_bible/ميخا/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/32.jpg" alt="سفر ميخا">
+                            </div>
+                        </a>
+                        <!--يونان-->
+                        <a href="old_bible/يونان/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/33.jpg" alt="سفر يونان">
+                            </div>
+                        </a>
+                        <!--ناحوم-->
+                        <a href="old_bible/ناحوم/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/34.jpg" alt="سفر ناحوم">
+                            </div>
+                        </a>
+                        <!--حبقوق-->
+                        <a href="old_bible/حبقوق/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/35.jpg" alt="سفر حبقوق">
+                            </div>
+                        </a>
+                        <!--صفنيا-->
+                        <a href="old_bible/صفنيا/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/36.jpg" alt="سفر صفنيا">
+                            </div>
+                        </a>
+                        <!--حجي-->
+                        <a href="old_bible/حجي/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/37.jpg" alt="سفر حجي">
+                            </div>
+                        </a>
+                        <!--زكريا-->
+                        <a href="old_bible/زكريا/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/38.jpg" alt="سفر زكريا">
+                            </div>
+                        </a>
+                        <!--ملاخي-->
+                        <a href="old_bible/ملاخي/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/39.jpg" alt="سفر ملاخي">
+                            </div>
+                        </a>
+                        <!--طوبيا-->
+                        <a href="old_bible/طوبيا/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/40.jpg" alt="سفر طوبيا">
+                            </div>
+                        </a>
+                        <!--يهوديت-->
+                        <a href="old_bible/يهوديت/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/41.jpg" alt="سفر يهوديت">
+                            </div>
+                        </a>
+                        <!--الحكمة-->
+                        <a href="old_bible/الحكمة/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/42.jpg" alt="سفر الحكمة">
+                            </div>
+                        </a>
+                        <!--يشوع بن سيراخ-->
+                        <a href="old_bible/يشوع_ابن_سيراخ/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/43.jpg" alt="سفر يشوع ابن سيراخ">
+                            </div>
+                        </a>
+                        <!--باروك-->
+                        <a href="old_bible/باروك/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/44.jpg" alt="سفر باروك">
+                            </div>
+                        </a>
+                        <!--المكابيين الاول-->
+                        <a href="old_bible/المكابيين_الاول/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/45.jpg" alt="سفر المكابيين الاول">
+                            </div>
+                        </a>
+                        <!--المكابيين الثاني-->
+                        <a href="old_bible/المكابيين_الثاني/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/old_bible_cover/46.jpg" alt="سفر المكابيين الثاني">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bible-header">
+                    <div class="title">
+                        <h3>العهد الجديد</h3>
+                        <h6>
+                            عدد الاسفار : <span>27</span>
+                            عدد الأصحاحات : <span>260</span>
+                        </h6>
+                    </div>
+                    <div class="but">
+                        <button id="showAllButtonNew" class="grid"><i class='bx bx-grid'></i></button>
+                    </div>
+                </div>
+                <div class="new">
+                    <div class="container" id="showAllContainerNew">
+                        <!--متي-->
+                        <a href="new_bible/متي/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/1.jpg" alt="انجيل متي">
+                            </div>
+                        </a>
+                        <!--مرقس-->
+                        <a href="new_bible/مرقس/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/2.jpg" alt="انجيل مرقس">
+                            </div>
+                        </a>
+                        <!--لوقا-->
+                        <a href="new_bible/لوقا/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/3.jpg" alt="انجيل لوقا">
+                            </div>
+                        </a>
+                        <!--يوحنا-->
+                        <a href="new_bible/يوحنا/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/4.jpg" alt="انجيل يوحنا">
+                            </div>
+                        </a>
+                        <!--أعمال الرسل-->
+                        <a href="new_bible/اعمال_الرسل/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/5.jpg" alt="اعمال الرسل">
+                            </div>
+                        </a>
+                        <!--رومية-->
+                        <a href="new_bible/رومية/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/6.jpg" alt="رومية">
+                            </div>
+                        </a>
+                        <!--كورنثوس الاولي-->
+                        <a href="new_bible/كورنثوس_الاولي/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/7.jpg" alt="كورنثوس الاولي">
+                            </div>
+                        </a>
+                        <!--كورنثوس الثانية-->
+                        <a href="new_bible/كورنثوس_الثانية/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/8.jpg" alt="كورنثوس الثانية">
+                            </div>
+                        </a>
+                        <!--غلاطية-->
+                        <a href="new_bible/غلاطية/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/9.jpg" alt="غلاطية">
+                            </div>
+                        </a>
+                        <!--افسس-->
+                        <a href="new_bible/افسس/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/10.jpg" alt="افسس">
+                            </div>
+                        </a>
+                        <!--فيلبي-->
+                        <a href="new_bible/فيلبي/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/11.jpg" alt="فيلبي">
+                            </div>
+                        </a>
+                        <!--كولوسي-->
+                        <a href="new_bible/كولوسي/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/12.jpg" alt="كولوسي">
+                            </div>
+                        </a>
+                        <!--تسالونيكي الاولي-->
+                        <a href="new_bible/تسالونيكي_الاولي/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/13.jpg" alt="تسالونيكي الاولي">
+                            </div>
+                        </a>
+                        <!--تسالونيكي التانية-->
+                        <a href="new_bible/تسالونيكي_الثانية/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/14.jpg" alt="تسالونيكي الثانية">
+                            </div>
+                        </a>
+                        <!--تيموثاوس الاولي-->
+                        <a href="new_bible/تيموثاوس_الاولي/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/15.jpg" alt="تيموثاوس الاولي">
+                            </div>
+                        </a>
+                        <!--تيموثاوس الثانية-->
+                        <a href="new_bible/تيموثاوس_الثانية/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/16.jpg" alt="تيموثاوس الثانية">
+                            </div>
+                        </a>
+                        <!--تيطس-->
+                        <a href="new_bible/تيطس/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/17.jpg" alt="تيطس">
+                            </div>
+                        </a>
+                        <!--فليمون-->
+                        <a href="new_bible/فليمون/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/18.jpg" alt="فليمون">
+                            </div>
+                        </a>
+                        <!--العبرانيين-->
+                        <a href="new_bible/العبرانيين/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/19.jpg" alt="العبرانيين">
+                            </div>
+                        </a>
+                        <!--يعقوب-->
+                        <a href="new_bible/يعقوب/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/20.jpg" alt="يعقوب">
+                            </div>
+                        </a>
+                        <!--الاولي ل بطرس-->
+                        <a href="new_bible/بطرس_الاولي/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/21.jpg" alt="الرسالة الاولي لـ بطرس">
+                            </div>
+                        </a>
+                        <!--الثانية ل بطرس-->
+                        <a href="new_bible/بطرس_الثانية/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/22.jpg"
+                                    alt="الرسالة الثانية لـ بطرس">
+                            </div>
+                        </a>
+                        <!--الاولي ل يوحنا-->
+                        <a href="new_bible/يوحنا_الاولي/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/23.jpg"
+                                    alt="الرسالة الاولي لـ يوحنا">
+                            </div>
+                        </a>
+                        <!--الثانية لـ يوحنا-->
+                        <a href="new_bible/يوحنا_الثانية/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/24.jpg"
+                                    alt="الرسالة الثانية لـ يوحنا">
+                            </div>
+                        </a>
+                        <!--الثالثة لـ يوحنا-->
+                        <a href="new_bible/يوحنا_الثالثة/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/25.jpg"
+                                    alt="الرسالة الثالثة لـ يوحنا">
+                            </div>
+                        </a>
+                        <!--يهوذا-->
+                        <a href="new_bible/يهوذا/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/26.jpg" alt="يهوذا">
+                            </div>
+                        </a>
+                        <!--الرؤيا-->
+                        <a href="new_bible/الرؤيا/0.html" class="box">
+                            <div class="image">
+                                <img src="../../assets/image/Bible/new_bible_cover/27.jpg" alt="الرؤيا">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--==========================
+        To Page
+    =============================-->
+    <button id="scrollToTopBtn"><i class='bx bx-chevron-up'></i></button>
+    <!--==========================
+        Footer
+    =============================-->
+    <footer class="footer" id="footer">
+        <h6>تصميم و تنفيذ فريق
+            <a href="https://t.me/coptic_elsakhra" target="_blank">الصخرة القبطية</a>
+        </h6>
+    </footer>
+    <!--==========================
+        Mix Screen (300px)
+    =============================-->
+    <div class="screen-width">
+        <div class="container">
+            <div class="logo">
+                <h1>الصخرة</h1>
+            </div>
+            <div class="content">
+                <p>
+                    لدي موقع الصخرة الكثير لتقديمه بحيث نطلب منك توجيه جهازك إلى الوضع الرأسي أو العثور علي شاشة أكبر.
+                    لكي تستمتع بتجربة مميزة.
+                </p>
+                <a href="https://t.me/coptic_elsakhra">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <p>تيليجرام</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--==========================
+        Script
+    =============================-->
+    <!-- Main Script -->
+    <script src="../../assets/js/mianScript.js"></script>
+    <script src="../../assets/js/search.js"></script>
+    <script src="https://kit.fontawesome.com/97772c25a1.js" crossorigin="anonymous"></script>
+    <script>
+        // SHOW ALL BIBLE 
+        const showAllContainerOld = document.getElementById('showAllContainerOld');
+        const showAllButtonOld = document.getElementById('showAllButtonOld');
+        showAllButtonOld.addEventListener('click', function () {
+            showAllContainerOld.classList.toggle('show-all-old');
+        });
+
+        // SHOW ALL BIBLE 
+        const sliderContainerNew = document.getElementById('showAllContainerNew');
+        const showAllButtonNew = document.getElementById('showAllButtonNew');
+        showAllButtonNew.addEventListener('click', function () {
+            sliderContainerNew.classList.toggle('show-all-new');
+        });
+    </script>
+</body>
+
+</html>

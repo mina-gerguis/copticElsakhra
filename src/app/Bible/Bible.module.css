@@ -1,0 +1,493 @@
+/** Bible || Container || ImageBg */
+/*! Container */
+.container {
+    direction: rtl;
+}
+
+/*! ImageBg */
+.bg {
+    display: flex;
+    justify-content: center;
+    margin: 7rem 0 3rem 0;
+}
+
+.bgImage {
+    width: 70%;
+    height: 350px;
+    border-radius: 15px;
+}
+
+/** Content || Old Books || New Books */
+/* ! Content */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title h3 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-family: "Cairo", sans-serif;
+    color: var(--second-color);
+}
+
+.title p {
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.icon {
+    font-size: var(--fs-24);
+    color: var(--themeEl);
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.bibleContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+
+
+.showAll {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+.bibleContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 2rem 0;
+    justify-content: space-evenly;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.bibleContainer::-webkit-scrollbar {
+    background: none;
+}
+
+.bible__page .bible_content .old .container .box,
+.bible__page .bible_content .new .container .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    transition: 400ms;
+    transform: scale(0.9);
+}
+
+.bible__page .bible_content .old .container .box .image img,
+.bible__page .bible_content .new .container .box .image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+}
+
+.bible__page .bible_content .old .container .box .image:hover,
+.bible__page .bible_content .new .container .box .image:hover {
+    transform: scale(1.1);
+}
+
+.chapters__page .header-page {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    line-height: 45px;
+    padding: 2rem;
+}
+
+.chapters__page .header-page .image img {
+    width: 250px;
+    border-radius: 5px;
+}
+
+.chapters__page .header-page .title h3 {
+    font-size: 43px;
+    font-family: "Tajawal";
+    color: var(--main-color);
+}
+
+.chapters__page .header-page .title h6 {
+    font-size: 16px;
+}
+
+.chapters__page .header-page .title .summaryBut {
+    background-color: var(--second-color-10);
+    width: 100%;
+    color: var(--main-color);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.chapters__page .header-page .title .summaryBut:hover {
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+.chapters__page .summary h6 {
+    font-size: 16px;
+    margin: 1rem 0;
+    line-height: 25px;
+}
+
+.chapters__page .summary h6 b {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.chapters__page .summary span {
+    font-size: 30px;
+    color: var(--red);
+    font-family: "Tajawal";
+    font-weight: 600;
+}
+
+.chapters__page .summary .main-mes {
+    color: var(--main-color);
+    font-size: 32px;
+    margin: 0.5rem 0;
+}
+
+.chapters__page .summary h5 {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.chapters__page .container {
+    display: grid;
+    grid-template-columns: repeat(15, 50px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.chapters__page .container .box {
+    width: 50px;
+    height: 50px;
+    background-color: var(--second-color-10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.chapters__page .container .box:hover {
+    background-color: #cce5ff;
+}
+
+.chapters__page .navigation {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.chapters__page .navigation a {
+    display: flex;
+    align-items: center;
+    background-color: var(--second-color-10);
+    border-radius: 10px;
+    text-align: center;
+    padding: 0 0.9rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.chapters__page .navigation a i {
+    padding: 0.8rem 0;
+    margin: 0 0.1rem;
+}
+
+.chapters__page .navigation .next:hover i {
+    margin: 0 0.5rem 0 0;
+}
+
+.chapters__page .navigation .previous:hover i {
+    margin: 0 0 0 0.5rem;
+}
+
+.chapters__page .navigation .present {
+    cursor: auto;
+}
+
+.chapters__page .navigation .present i {
+    display: none;
+}
+
+.bible-chapter__page #formationNotActive,
+.bible-chapter__page #formationActive {
+    display: none;
+}
+
+.bible-chapter__page .header-page {
+    margin: 5rem 0;
+    text-align: center;
+}
+
+.bible-chapter__page .header-page h3 {
+    color: var(--subject-color);
+    font-size: 36px;
+    font-family: "NotoKufi";
+}
+
+.bible-chapter__page .header-page h6 {
+    margin-top: 0.5rem;
+    font-size: 16px;
+    font-family: "Cairo";
+}
+
+.bible-chapter__page .header-page .audio-player {
+    padding: 20px;
+    margin: 2rem auto;
+    max-width: 700px;
+    width: 100%;
+    direction: ltr;
+    background: var(--light-mode-box-glass);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls {
+    display: flex;
+    flex-direction: column;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .track-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .track-info .album-art {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .track-info .track-details {
+    margin: 0;
+    text-align: right;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .track-info .track-details h3 {
+    font-size: 26px;
+    font-family: "Cairo";
+    color: var(--subject-color);
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .track-info .track-details h6 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .track-info .track-details h6 i {
+    font-weight: 600;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .track-info .track-details h5 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .progress-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .progress-container .progress-bar {
+    flex-grow: 1;
+    height: 10px;
+    background-color: var(--gray);
+    border-radius: 5px;
+    position: relative;
+    margin: 0 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .progress-container .progress-bar .progress {
+    height: 100%;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    width: 0%;
+    transition: width 0.2s ease-in-out;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .progress-container .time-display {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .controls button:focus {
+    outline: none;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-top: 20px;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .action-buttons .share-btn,
+.bible-chapter__page .header-page .audio-player .player-controls .action-buttons .download-btn {
+    padding: 10px 20px;
+    border-radius: 45px;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--white);
+    font-family: "Tajawal";
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .action-buttons .share-btn i,
+.bible-chapter__page .header-page .audio-player .player-controls .action-buttons .download-btn i {
+    font-size: 12px;
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .action-buttons .share-btn {
+    background-color: var(--pink);
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .action-buttons .share-btn:hover {
+    background-color: var(--darkred);
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .action-buttons .download-btn {
+    background-color: var(--darkred);
+}
+
+.bible-chapter__page .header-page .audio-player .player-controls .action-buttons .download-btn:hover {
+    background-color: var(--pink);
+}
+
+.bible-chapter__page .header-page .option {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bible-chapter__page .header-page .option .box {
+    background-color: var(--second-color-10);
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Tajawal";
+    font-weight: 600;
+}
+
+.bible-chapter__page .header-page .option .box a {
+    color: var(--black);
+}
+
+.bible-chapter__page .header-page .option .box:hover {
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+.bible-chapter__page .header-page .option .box:hover i {
+    color: var(--second-color);
+}
+
+.bible-chapter__page .header-page .option .box:hover a {
+    color: var(--white);
+}
+
+.bible-chapter__page .header-page .option .box i {
+    font-size: 15px;
+    margin: 0 0.2rem;
+    color: var(--main-color);
+}
+
+.bible-chapter__page .content .container strong {
+    color: var(--red);
+    font-size: 40px;
+    font-family: "Tajawal";
+    font-weight: 600;
+    margin: 0.5rem 0;
+    display: block;
+}
+
+.bible-chapter__page .content .container p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 0 0.2rem;
+    display: inline;
+    padding: 0.2rem 0;
+}
+
+.bible-chapter__page .content .container p:hover {
+    background-color: var(--second-color-13);
+}
+
+.bible-chapter__page .content .container p b {
+    font-weight: 600;
+    margin: 0 0.3rem;
+    color: var(--main-color);
+}
+
+.bible-chapter__page .content .block {
+    display: block;
+}
+
+.bible-chapter__page .exegesis {
+    margin-top: 2rem;
+}
+
+.bible-chapter__page .exegesis h3 {
+    font-size: 38px;
+    color: var(--pink);
+}
+
+/*# sourceMappingURL=mainBible.css.map */

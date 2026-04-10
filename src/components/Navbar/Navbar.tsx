@@ -9,7 +9,7 @@ import { useTheme } from "@/lib/ThemeContext";
 import { BsBook, BsJournalText, BsPlayCircle, BsPencilSquare, BsLifePreserver } from "react-icons/bs";
 
 const navItems = [
-    { label: "الكتاب المقدّس", href: "/products", icon: <BsBook /> },
+    { label: "الكتاب المقدّس", href: "/Bible", icon: <BsBook /> },
     { label: "الاجبية", href: "/services", icon: <BsJournalText /> },
     { label: "الميديا", href: "/blog", icon: <BsPlayCircle /> },
     { label: "المدونة", href: "/about", icon: <BsPencilSquare /> },

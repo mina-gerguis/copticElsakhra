@@ -11,9 +11,9 @@
 }
 
 .modal {
-    width: 450px;
+    width: 500px;
     max-width: 92%;
-    height: 70vh;
+    height: 50vh;
     background: var(--modalSearchBg);
     border-radius: var(--br-8);
     padding: var(--pd-16);
@@ -84,7 +84,7 @@
     padding: 10px 12px;
     border-radius: var(--br-4);
     border: none;
-    background: none;
+    background:  ;
     cursor: pointer;
     transition: .18s;
     font-size: var(--fs-16);
