@@ -63,6 +63,11 @@ button {
   src: url("../../public/fonts/Tajawal.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Hagrid";
+  src: url("../../public/fonts/Hagrid-Regular-trial.ttf") format("truetype");
+}
+
 :root {
   --font-title-size: 2.5rem;
   --ios-blue: rgb(0, 123, 255);
@@ -71,72 +76,111 @@ button {
   --color-muted-2: #070101a9;
   --blue: hsl(240, 100%, 50%);
 
-  /*! SPACES SIZE */
-  --space-xxxs: 0.125rem; /* 2px (اختياري) */
-  --space-xxs: 0.25rem; /* 4px (اختياري) */
-  --space-xs: 0.5rem; /* 8px */
-  --space-sm: 1rem; /* 16px */
-  --space-md: 1.5rem; /* 24px */
-  --space-lg: 2rem; /* 32px */
-  --space-xl: 2.5rem; /* 40px */
-  --space-2xl: 3rem; /* 48px */
-  --space-3xl: 4rem; /* 64px */
-  --space-4xl: 5rem; /* 80px */
-
-/*! FONT SIZES */
-  --fs-12: 0.75rem; /* 12px */
-  --fs-16: 1rem; /* 16px */
-  --fs-18: 1.125rem; /* 18px */
-  --fs-20: 1.25rem; /* 20px */
-  --fs-24: 1.5rem; /* 24px */
-  --fs-28: 1.75rem; /* 28px */
-  --fs-32: 2rem; /* 32px */
-  --fs-40: 2.5rem; /* 40px */
-  --fs-48: 3rem; /* 48px */
-  --fs-64: 4rem; /* 64px */ 
+  /*! FONT SIZES */
+  --fs-12: 0.75rem;
+  /* 12px */
+  --fs-16: 1rem;
+  /* 16px */
+  --fs-18: 1.125rem;
+  /* 18px */
+  --fs-20: 1.25rem;
+  /* 20px */
+  --fs-24: 1.5rem;
+  /* 24px */
+  --fs-28: 1.75rem;
+  /* 28px */
+  --fs-32: 2rem;
+  /* 32px */
+  --fs-40: 2.5rem;
+  /* 40px */
+  --fs-48: 3rem;
+  /* 48px */
+  --fs-64: 4rem;
+  /* 64px */
   /*! PADDINGS */
-  --pd-2: 0.125rem; /* 2px */
-  --pd-4: 0.25rem; /* 4px */
-  --pd-8: 0.5rem; /* 8px */
-  --pd-12: 0.75rem; /* 12px */
-  --pd-16: 1rem; /* 16px */
-  --pd-24: 1.5rem; 
-  --pd-32: 2rem; /* 32px */
-  --pd-40: 2.5rem; /* 40px */
-  --pd-48: 3rem; /* 48px */
-  --pd-64: 4rem; /* 64px */
+  --pd-2: 0.125rem;
+  /* 2px */
+  --pd-4: 0.25rem;
+  /* 4px */
+  --pd-8: 0.5rem;
+  /* 8px */
+  --pd-12: 0.75rem;
+  /* 12px */
+  --pd-16: 1rem;
+  /* 16px */
+  --pd-24: 1.5rem;
+  --pd-32: 2rem;
+  /* 32px */
+  --pd-40: 2.5rem;
+  /* 40px */
+  --pd-48: 3rem;
+  /* 48px */
+  --pd-64: 4rem;
+  /* 64px */
   /*! MARGINS */
-  --mg-2: 0.125rem; /* 2px */
-  --mg-4: 0.25rem; /* 4px */
-  --mg-8: 0.5rem; /* 8px */
-  --mg-12: 0.75rem; /* 12px */
-  --mg-16: 1rem; /* 16px */
-  --mg-24: 1.5rem; /* 24px */
-  --mg-32: 2rem; /* 32px */
-  --mg-40: 2.5rem; /* 40px */
-  --mg-48: 3rem; /* 48px */
-  --mg-64: 4rem; /* 64px */
+  --mg-2: 0.125rem;
+  /* 2px */
+  --mg-4: 0.25rem;
+  /* 4px */
+  --mg-8: 0.5rem;
+  /* 8px */
+  --mg-12: 0.75rem;
+  /* 12px */
+  --mg-16: 1rem;
+  /* 16px */
+  --mg-24: 1.5rem;
+  /* 24px */
+  --mg-32: 2rem;
+  /* 32px */
+  --mg-40: 2.5rem;
+  /* 40px */
+  --mg-48: 3rem;
+  /* 48px */
+  --mg-64: 4rem;
+  /* 64px */
+  --mg-68: 4.25rem;
+  /* 68px */
+  --mg-72: 4.5rem;
+  /* 72px */
   /*! BORDER RADIUS */
-  --br-4: 0.25rem; /* 4px */
-  --br-8: 0.5rem; /* 8px */
-  --br-16: 1rem; /* 16px */
-  --br-32: 2rem; /* 32px */
+  --br-4: 0.25rem;
+  /* 4px */
+  --br-8: 0.5rem;
+  /* 8px */
+  --br-16: 1rem;
+  /* 16px */
+  --br-32: 2rem;
+  /* 32px */
   /*! HEIGHTS */
-  --height-16: 1rem; /* 16px */
-  --height-32: 2rem; /* 32px */
-  --height-36: 2.25rem; /* 36px */
-  --height-40: 2.5rem; /* 40px */
-  --height-60: 3.75rem; /* 60px */
-  --height-64: 4rem; /* 64px */
-  --height-350: 21.875rem; /* 350px */
+  --height-16: 1rem;
+  /* 16px */
+  --height-32: 2rem;
+  /* 32px */
+  --height-36: 2.25rem;
+  /* 36px */
+  --height-40: 2.5rem;
+  /* 40px */
+  --height-60: 3.75rem;
+  /* 60px */
+  --height-64: 4rem;
+  /* 64px */
+  --height-350: 21.875rem;
+  /* 350px */
   /*! WIDTHS */
-  --width-16: 1rem; /* 16px */
-  --width-32: 2rem; /* 32px */
-  --width-36: 2.25rem; /* 36px */
-  --width-40: 2.5rem; /* 40px */
-  --width-60: 3.75rem; /* 60px */
-  --width-64: 4rem; /* 64px */
-  --width-350: 21.875rem; /* 350px */
+  --width-16: 1rem;
+  /* 16px */
+  --width-32: 2rem;
+  /* 32px */
+  --width-36: 2.25rem;
+  /* 36px */
+  --width-40: 2.5rem;
+  /* 40px */
+  --width-60: 3.75rem;
+  /* 60px */
+  --width-64: 4rem;
+  /* 64px */
+  --width-350: 21.875rem;
+  /* 350px */
 }
 
 body {
@@ -226,6 +270,7 @@ body.dark {
 
 
 @layer base {
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;

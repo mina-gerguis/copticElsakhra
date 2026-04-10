@@ -10,37 +10,37 @@ import Navbar from "@/components/Navbar/Navbar";
 
 
 const oldBooks = [
-    { name: "تكوين", img: "1.jpg" },
-    { name: "خروج", img: "2.jpg" },
-    { name: "لاويين", img: "3.jpg" },
-    { name: "عدد", img: "4.jpg" },
-    { name: "تثنية", img: "5.jpg" },
-    { name: "يشوع", img: "6.jpg" },
-    { name: "قضاة", img: "7.jpg" },
-    { name: "راعوث", img: "8.jpg" },
-    { name: "صموئيل الأول", img: "9.jpg" },
-    { name: "صموئيل الثاني", img: "10.jpg" },
-    { name: "ملوك الأول", img: "11.jpg" },
-    { name: "ملوك الثاني", img: "12.jpg" },
-    { name: "أخبار الأيام الأول", img: "13.jpg" },
-    { name: "أخبار الأيام الثاني", img: "14.jpg" },
-    { name: "عزرا", img: "15.jpg" },
-    { name: "نحميا", img: "16.jpg" },
-    { name: "استير", img: "17.jpg" },
-    { name: "أيوب", img: "18.jpg" },
-    { name: "مزامير", img: "19.jpg" },
-    { name: "أمثال", img: "20.jpg" },
-    { name: "جامعة", img: "21.jpg" },
-    { name: "نشيد الأنشاد", img: "22.jpg" },
-    { name: "إشعياء", img: "23.jpg" },
-    { name: "إرميا", img: "24.jpg" },
-    { name: "مراثي إرميا", img: "25.jpg" },
-    { name: "حزقيال", img: "26.jpg" },
-    { name: "دانيال", img: "27.jpg" },
-    { name: "هوشع", img: "28.jpg" },
-    { name: "يوئيل", img: "29.jpg" },
-    { name: "عاموس", img: "30.jpg" },
-    { name: "عوبديا", img: "31.jpg" },
+    { name: "تكوين", link: "o1", img: "1.jpg" },
+    { name: "خروج", link: "o2", img: "2.jpg" },
+    { name: "لاويين", link: "o3", img: "3.jpg" },
+    { name: "عدد", link: "o4", img: "4.jpg" },
+    { name: "تثنية", link: "o5", img: "5.jpg" },
+    { name: "يشوع", link: "o6", img: "6.jpg" },
+    { name: "قضاة", link: "o7", img: "7.jpg" },
+    { name: "راعوث", link: "o8", img: "8.jpg" },
+    { name: "صموئيل الأول", link: "o9", img: "9.jpg" },
+    { name: "صموئيل الثاني", link: "o10", img: "10.jpg" },
+    { name: "ملوك الأول", link: "o11", img: "11.jpg" },
+    { name: "ملوك الثاني", link: "o12", img: "12.jpg" },
+    { name: "أخبار الأيام الأول", link: "o13", img: "13.jpg" },
+    { name: "أخبار الأيام الثاني", link: "o14", img: "14.jpg" },
+    { name: "عزرا", link: "o15", img: "15.jpg" },
+    { name: "نحميا", link: "o16", img: "16.jpg" },
+    { name: "استير", link: "o17", img: "17.jpg" },
+    { name: "أيوب", link: "o18", img: "18.jpg" },
+    { name: "مزامير", link: "o19", img: "19.jpg" },
+    { name: "أمثال", link: "o20", img: "20.jpg" },
+    { name: "جامعة", link: "o21", img: "21.jpg" },
+    { name: "نشيد الأنشاد", link: "o22", img: "22.jpg" },
+    { name: "إشعياء", link: "o23", img: "23.jpg" },
+    { name: "إرميا", link: "o24", img: "24.jpg" },
+    { name: "مراثي إرميا", link: "o25", img: "25.jpg" },
+    { name: "حزقيال", link: "o26", img: "26.jpg" },
+    { name: "دانيال", link: "o27", img: "27.jpg" },
+    { name: "هوشع", link: "o28", img: "28.jpg" },
+    { name: "يوئيل", link: "o29", img: "29.jpg" },
+    { name: "عاموس", link: "o30", img: "30.jpg" },
+    { name: "عوبديا", link: "o31", img: "31.jpg" },
 ]
 
 const newBooks = [
@@ -97,8 +97,7 @@ function BiblePage() {
                         <div className={styles.title}>
                             <h3>العهد القديم</h3>
                             <p>
-                                عدد الاسفار : <span>46</span>
-                                عدد الأصحاحات : <span>929</span>
+                                يتكون من 46 سفراً، ويحتوي على 929 أصحاحاً.
                             </p>
                         </div>
                         <div onClick={() => setShowAllOld(!showAllOld)}>
@@ -106,22 +105,19 @@ function BiblePage() {
                         </div>
                     </div>
 
-                    <div className={styles.old}>
-                        <div className={`${styles.bibleContainer} ${showAllOld ? styles.showAll : ""
-                            }`}>
-                            {oldBooks.map((book, i) => (
-                                <Link key={i} href={`/old_bible/${book.name}/0`} className={styles.box}>
-                                    <div className={styles.image}>
-                                        <Image
-                                            src={`/assets/Bible/oldCover/${book.img}`}
-                                            alt={book.name}
-                                            width={200}
-                                            height={200}
-                                        />
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
+                    <div className={`${styles.bibleContainer} ${showAllOld ? styles.showAll : ""
+                        }`}>
+                        {oldBooks.map((book, i) => (
+                            <Link key={i} href={`../Bible/book/old/${book.link}`} className={styles.box}>
+                                <Image
+                                    className={styles.image}
+                                    src={`/assets/Bible/oldCover/${book.img}`}
+                                    alt={book.name}
+                                    width={200}
+                                    height={200}
+                                />
+                            </Link>
+                        ))}
                     </div>
 
                     {/* العهد الجديد */}
@@ -129,8 +125,7 @@ function BiblePage() {
                         <div className={styles.title}>
                             <h3>العهد الجديد</h3>
                             <p>
-                                عدد الاسفار : <span>27</span>
-                                عدد الأصحاحات : <span>260</span>
+                                يحتوي علي 27 انجيل و 260 اصحاحاً.
                             </p>
                         </div>
                         <div onClick={() => setShowAllNew(!showAllNew)}>
@@ -138,24 +133,21 @@ function BiblePage() {
                         </div>
                     </div>
 
-                    <div className={styles.new}>
-                        <div className={`${styles.bibleContainer} ${showAllNew ? styles.showAll : ""
-                            }`}>
+                    <div className={`${styles.bibleContainer} ${showAllNew ? styles.showAll : ""
+                        }`}>
 
-                            {newBooks.map((book, i) => (
-                                <Link key={i} href={`/new_bible/${book.name}/0`} className={styles.box}>
-                                    <div className={styles.image}>
-                                        <Image
-                                            src={`/assets/Bible/newCover/${book.img}`}
-                                            alt={book.name}
-                                            width={200}
-                                            height={200}
-                                        />
-                                    </div>
-                                </Link>
-                            ))}
+                        {newBooks.map((book, i) => (
+                            <Link key={i} href={`/new_bible/${book.name}/0`} className={styles.box}>
+                                <Image
+                                    className={styles.image}
+                                    src={`/assets/Bible/newCover/${book.img}`}
+                                    alt={book.name}
+                                    width={200}
+                                    height={200} 
+                                />
+                            </Link>
+                        ))}
 
-                        </div>
                     </div>
 
                 </div>
