@@ -1,0 +1,89 @@
+.verseSection {
+    box-shadow: var(--box-shadow-v1);
+    background-color: var(--themeBg);
+    border: 1px solid var(--borderColor);
+    margin: 0 var(--mg-80);
+    position: relative;
+    border-radius: var(--br-8);
+}
+
+.verseSection:before {
+    position: absolute;
+    content: "";
+    z-index: 2;
+}
+
+.verseSection:after {
+    position: absolute;
+    content: "";
+    width: 0.25rem;
+    inset: 0.65rem auto 0.65rem 0.5rem;
+    border-radius: var(--br-8);
+    background: var(--mainColor);
+}
+
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image {
+    width: 200px;
+    height: auto;
+}
+
+.verses {
+    text-align: right;
+    color: var(--themeEl);
+}
+
+.title {
+    font-family: "Hagrid", sans-serif;
+    font-size: var(--fs-24);
+    font-weight: 600;
+    margin-bottom: var(--mg-8);
+}
+
+.verse {
+    font-family: "Cairo", sans-serif;
+    line-height: 25px;
+    font-weight: 600;
+    user-select: auto;
+            margin-left: var(--mg-24);
+
+}
+
+@media (max-width: 768px) {
+
+    .image {
+        width: 140px;
+    }
+
+    .verses {
+        margin-left: var(--mg-24);
+    }
+
+    .title {
+        font-size: var(--fs-20);
+    }
+}
+
+@media (max-width: 480px) {
+    .verseSection {
+        margin: 0 var(--mg-24);
+    }
+
+    .image {
+        width: 120px;
+    }
+
+    .title {
+        font-size: var(--fs-18);
+    }
+
+    .verse {
+        font-size: var(--fs-14);
+    }
+}

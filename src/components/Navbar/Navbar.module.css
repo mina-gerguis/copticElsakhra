@@ -262,9 +262,12 @@
 /*Medium Screens (Tablets, Small Laptops)*/
 @media (max-width: 1024px) {
 
-    .rightGroup,
-    .leftGroup {
+    .rightGroup {
         gap: 2px;
+    }
+
+    .leftGroup {
+        gap: 10px;
     }
 
     .logo {

@@ -220,6 +220,10 @@ body.dark {
   /* Search Bar */
   --modalSearchBg: hsl(240, 100%, 5%);
 
+
+    /* ! Border */
+  --borderColor: hsla(0, 0%, 58%, 0.301);
+  
   --buttonBorder: hsla(0, 0%, 55%, 0.39);
 
   --inputButton: rgb(236, 6, 6);
