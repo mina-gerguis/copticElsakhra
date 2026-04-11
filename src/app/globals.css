@@ -72,22 +72,16 @@ button {
   --grayColor: #f7f7f78e;
 
   /*! FONT SIZES */
-  --fs-12: 0.75rem;
-  /* 12px */
-  --fs-16: 1rem;
-  /* 16px */
-  --fs-18: 1.125rem;
-  /* 18px */
-  --fs-20: 1.25rem;
-  /* 20px */
-  --fs-24: 1.5rem;
-  /* 24px */
-  --fs-28: 1.75rem;
-  /* 28px */
-  --fs-32: 2rem;
-  /* 32px */
-  --fs-40: 2.5rem;
-  /* 40px */
+  --fs-12: 0.75rem; /* 12px */
+  --fs-14: 0.875rem; /* 14px */
+  --fs-16: 1rem; /* 16px */
+  --fs-18: 1.125rem; /* 18px */
+  --fs-20: 1.25rem; /* 20px */
+  --fs-24: 1.5rem; /* 24px */
+  --fs-28: 1.75rem; /* 28px */
+  --fs-32: 2rem; /* 32px */
+  --fs-36: 2.375rem; /* 38px */
+  --fs-40: 2.5rem; /* 40px */
   --fs-48: 3rem;
   /* 48px */
   --fs-64: 4rem;
@@ -113,30 +107,21 @@ button {
   --pd-64: 4rem;
   /* 64px */
   /*! MARGINS */
-  --mg-2: 0.125rem;
-  /* 2px */
-  --mg-4: 0.25rem;
-  /* 4px */
-  --mg-8: 0.5rem;
-  /* 8px */
-  --mg-12: 0.75rem;
-  /* 12px */
-  --mg-16: 1rem;
-  /* 16px */
-  --mg-24: 1.5rem;
-  /* 24px */
-  --mg-32: 2rem;
-  /* 32px */
-  --mg-40: 2.5rem;
-  /* 40px */
-  --mg-48: 3rem;
-  /* 48px */
-  --mg-64: 4rem;
-  /* 64px */
-  --mg-68: 4.25rem;
-  /* 68px */
-  --mg-72: 4.5rem;
-  /* 72px */
+  --mg-2: 0.125rem; /* 2px */
+  --mg-4: 0.25rem; /* 4px */
+  --mg-8: 0.5rem; /* 8px */
+  --mg-12: 0.75rem; /* 12px */
+  --mg-16: 1rem; /* 16px */
+  --mg-24: 1.5rem; /* 24px */
+  --mg-32: 2rem; /* 32px */
+  --mg-40: 2.5rem; /* 40px */
+  --mg-48: 3rem; /* 48px */
+  --mg-64: 4rem; /* 64px */
+  --mg-68: 4.25rem; /* 68px */
+  --mg-72: 4.5rem; /* 72px */
+  --mg-80: 5rem; /* 80px */
+  --mg-90: 5.625rem; /* 90px */
+  --mg-100: 6.25rem; /* 100px */
   /*! BORDER RADIUS */
   --br-4: 0.25rem;
   /* 4px */
@@ -261,13 +246,4 @@ body.dark {
   --container-color: #05050c;
   --card-linear: linear-gradient(to left top, #000000c4, #001130);
   --text-gradient: linear-gradient(90deg, rgb(160, 158, 158), rgb(59, 59, 59));
-}
-
-
-@layer base {
-
-  button:not(:disabled),
-  [role="button"]:not(:disabled) {
-    cursor: pointer;
-  }
 }

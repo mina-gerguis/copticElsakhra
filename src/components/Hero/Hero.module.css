@@ -1,85 +1,65 @@
 .introduction {
+    direction: rtl;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: row-reverse;
-    margin-top: 10rem;
-    padding-bottom: 0;
+    margin-top: var(--mg-90);
+}
 
-    .title {
-        text-align: center;
-        user-select: none;
+.imagesContainer {
+    height: 500px;
+    position: relative;
+}
 
-        .titleHead {
-            position: relative;
-            display: inline-block;
-            z-index: 1;
-            font-size: 16px;
-            font-weight: 600;
-            padding: 19px 20px 21px 24px;
-            box-shadow: 0 15px 40px var(--boxShadow);
-            background: var(--highlight);
-            border-radius: 4px;
-            margin-bottom: 40px;
+.title {
+    text-align: center;
+    user-select: none;
+    font-family: "Hagrid", sans-serif;
+    color: var(--themeEl);
+}
 
-            &::before {
-                position: absolute;
-                top: 50%;
-                left: -19px;
-                right: -19px;
-                transform: translateY(-50%);
-                height: 45px;
-                width: calc(100% + 38px);
-                background: var(--highlight);
-                box-shadow: 0 0 29px var(--boxShadow);
-                z-index: -1;
-                content: "";
-                clip-path: polygon(100% 0, 97% 50%, 100% 100%, 0 100%, 3% 50%, 0 0);
-            }
-        }
+.titleHead {
+    font-size: var(--fs-16);
+    font-weight: 700;
+    margin-bottom: var(--mg-8);
+    font-family: "Cairo", sans-serif;
+}
 
-        h2 {
-            font-family: "Cooper";
-            font-size: 36px;
-            margin-bottom: 20px;
-            animation: colorCycle 5s infinite;
-        }
+.mainTitle {
+    font-size: var(--fs-36);
+    margin-bottom: var(--mg-20);
+}
 
-        p {
-            font-size: 18px;
-            font-weight: 600;
-        }
+.secondTitle {
+    font-size: var(--fs-16);
+    font-family: "Cairo", sans-serif;
+    margin: var(--mg-8) 0;
+    font-weight: 600;
+}
 
-        .titleSecond {
-            text-align: start;
-            margin-top: 10px;
-
-            p {
-                font-size: 16px;
-                font-family: "Cairo";
-            }
-        }
+/*! Responsive  */
+@media (max-width: 768px) {
+    .introduction {
+        flex-direction: column;
+        gap: 30px;
     }
 }
 
-@keyframes colorCycle {
-    0% {
-        color: var(--main-color);
+@media (max-width: 480px) {
+    .introduction   {
+        gap: 20px;
     }
 
-    25% {
-        color: var(--second-color);
+     
+    .titleHead {
+        font-size: var(--fs-14);
+    }
+    .mainTitle {
+        font-size: var(--fs-28);
     }
 
-    50% {
-        color: var(--orange);
-    }
-
-    75% {
-        color: var(--pink);
-    }
-
-    100% {
-        color: var(--main-color);
+    .secondTitle {
+        font-size: var(--fs-14);
     }
 }

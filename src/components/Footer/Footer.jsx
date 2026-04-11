@@ -1,11 +1,7 @@
-import { FaGithubSquare, FaBehanceSquare } from "react-icons/fa";
-import { RxLinkedinLogo } from "react-icons/rx";
-import { SiFreedesktopdotorg, SiYoutubeshorts, SiLinktree } from "react-icons/si";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import styles from './Footer.module.css';
 
 const Pages = [
-  { name: "الكتاب المقدس", href: "#" },
+  { name: "الكتاب المقدس", href: "Bible" },
   { name: "الاجبية", href: "#" },
   { name: "طقس الكنيسة", href: "#" },
   { name: "مدايح الشهداء", href: "#" },
@@ -18,7 +14,7 @@ const Info = [
   { name: "التبرعات", href: "#"},
   { name: "الاقتراحات", href: "#"},
   { name: "مركز المساعدة", href: "#"},
-]
+];
 
 const Footer = () => {
   return (

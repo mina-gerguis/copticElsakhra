@@ -35,7 +35,7 @@
 
 /* ? Logo */
 .logo {
-    font-size: var(--fs-32);
+    font-size: var(--fs-28);
     font-family: "BIGX", sans-serif;
     color: var(--themeEl);
 }
@@ -264,15 +264,15 @@
 
     .rightGroup,
     .leftGroup {
-        gap: 10px;
+        gap: 2px;
     }
 
     .logo {
-        font-size: var(--fs-32);
+        font-size: var(--fs-28);
     }
 
     .navLinks {
-        gap: 2px;
+        gap: 1px;
     }
 
     .navLink {
@@ -280,7 +280,7 @@
     }
 
     .icon {
-        font-size: var(--fs-18);
+        font-size: var(--fs-16);
     }
 
     .buttonGroup {
