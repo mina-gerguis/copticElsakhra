@@ -1,0 +1,36 @@
+.dailySection {
+  width: 100%;
+}
+
+.content {
+  background-color: var(--box);
+  border-radius: 15px;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content h6 {
+  font-family: "Alexandria";
+  font-weight: 100;
+  font-size: 14px;
+  background-color: var(--second-color-10);
+  color: var(--second-color-11);
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  animation: zoomOut-zoomIn 2.5s infinite;
+}
+
+.content h4 {
+  margin: 0 0.5rem;
+}
+
+.content a {
+  font-family: "Alexandria";
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0.3rem;
+  color: var(--second-color);
+  text-decoration: none;
+}

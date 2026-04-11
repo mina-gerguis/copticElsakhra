@@ -56,6 +56,9 @@
 }
 
 @media (max-width: 768px) {
+ .verseSection {
+        margin: var(--mg-12) var(--mg-24);
+    }
 
     .image {
         width: 140px;
@@ -85,5 +88,7 @@
 
     .verse {
         font-size: var(--fs-14);
+        margin-left: var(--mg-16);
+
     }
 }
