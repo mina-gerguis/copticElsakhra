@@ -22,7 +22,7 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.leftSection}>
           <p className={styles.heading}>
-            قال بطرس الرسول ــ <br /> علي هذة الصخرة أبني  <br /> كنيستي.💒
+            قال يسوع لبطرس ــ <br /> وعلي هذة الصخرة أبني  <br /> كنيستي.💒
           </p>
         </div>
 
