@@ -21,22 +21,3 @@
 //   },
 // };
 
-export const dailyContent: Record<string, DailyContent> = {
-  "Jan 12": {
-    title: "استشهاد القديس باخوم",
-    images: ["/images/jan12/1.jpg", "/images/jan12/2.jpg"],
-    video: "https://www.youtube.com/embed/xxxx",
-  },
-
-  "Jun 7": {
-    title: "البابا شنودة الثالث",
-    images: ["/images/jun7/1.jpg"],
-    video: "https://www.youtube.com/embed/yyyy",
-  },
-
-    "apr-11": {
-    title: "البابا شنودة الثالث",
-    images: ["/assets/Hero/1.jpg"],
-    video: "https://www.youtube.com/embed/zzzz",
-    }
-};
