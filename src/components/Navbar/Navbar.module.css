@@ -64,6 +64,7 @@
 
 .navLink:hover {
     background-color: var(--navColorHover);
+    color: var(--themeEl);
 }
 
 /* * Search Bar || Dark Mode */
@@ -234,12 +235,13 @@
     color: var(--themeEl);
     font-size: var(--fs-16);
     font-weight: 500;
-    padding: 12px 16px;
-    border-radius: 10px;
+    padding: var(--pd-8) var(--pd-12);
+    border-radius: var(--br-8);
     transition:
         color 0.2s,
         background-color 0.2s;
     display: block;
+
 }
 
 .mobileNavLink {
@@ -255,7 +257,8 @@
 }
 
 .mobileNavLink:hover {
-    color: var(--navColorHover);
+    background-color: var(--mainColor);
+    color: #fff;
 }
 
 /*! ===== Responsive ===== */

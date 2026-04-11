@@ -6,6 +6,7 @@ import { BsHighlights, BsSun } from "react-icons/bs";
 import styles from "./Navbar.module.css";
 import SearchButton from "../Search/SearchButton";
 import { useTheme } from "@/lib/ThemeContext";
+import { label } from "motion/react-client";
 
 const navItems = [
     { label: "الكتاب المقدّس", href: "/Bible", icon: "📚" },
@@ -13,6 +14,9 @@ const navItems = [
     { label: "الميديا", href: "/blog", icon: "📺" },
     { label: "المدونة", href: "/about", icon: "📝" },
     { label: "مركز المساعدة", href: "/contact", icon: "❓" },
+    { label: "القداسات", href: "/mass", icon: "⛪" },
+    { label: "السنكسار", href: "/daily", icon: "📅" },
+    { label: "المكتبة الصوتية", href: "/audio-library", icon: "🎧" },
 ];
 
 export default function Navbar() {
@@ -45,7 +49,7 @@ export default function Navbar() {
 
                         {/* Center: Nav Links */}
                         <ul className={styles.navLinks}>
-                            {navItems.map((item) => (
+                            {navItems.slice(0, 5).map((item) => (
                                 <li key={item.href}>
                                     <Link href={item.href} className={styles.navLink}>
                                         <span className={styles.icon}>{item.icon}</span>
