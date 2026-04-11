@@ -470,7 +470,7 @@ class Canvas {
   }
 
   onTouchMove(e: MouseEvent | TouchEvent) {
-    if (!this.isDown || !this.scroll.position) return;
+    if (!this.isDown || this.scroll.position === undefined) return;
     const y = e instanceof TouchEvent ? e.touches[0].clientY : e.clientY;
     const distance = (this.start - y) * 0.1;
     this.scroll.target = this.scroll.position + distance;
@@ -485,10 +485,12 @@ class Canvas {
   }
 
   update() {
+    this.scroll.target += 0.003;
     this.scroll.current = lerp(this.scroll.current, this.scroll.target, this.scroll.ease);
     this.medias?.forEach(media => media.update(this.scroll));
     this.renderer.render({ scene: this.scene, camera: this.camera });
     this.scroll.last = this.scroll.current;
+    this.scroll.target += 0.003 * Math.max(0.5, 1 - Math.abs(this.scroll.current) * 0.01);
     requestAnimationFrame(this.update);
   }
 
