@@ -1,4 +1,6 @@
-.verseSection {
+/* ! Start Daily Verse CSS */
+.container {
+    direction: rtl;
     box-shadow: var(--box-shadow-v1);
     background-color: var(--themeBg);
     border: 1px solid var(--borderColor);
@@ -7,13 +9,13 @@
     border-radius: var(--br-8);
 }
 
-.verseSection:before {
+.container:before {
     position: absolute;
     content: "";
     z-index: 2;
 }
 
-.verseSection:after {
+.container:after {
     position: absolute;
     content: "";
     width: 0.25rem;
@@ -22,9 +24,15 @@
     background: var(--mainColor);
 }
 
-.container {
+.content {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
+    align-items: center;
+}
+
+.verseSection {
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
@@ -51,12 +59,66 @@
     line-height: 25px;
     font-weight: 600;
     user-select: auto;
-            margin-left: var(--mg-24);
-
+    margin-left: var(--mg-24);
 }
 
+/* * End Daily Verse CSS */
+/* ! Start Daily Synaxarium Css*/
+.dailyContent {
+    display: flex;
+    font-family: "Hagrid", sans-serif;
+    background-color: var(--themeBg);
+    color: var(--themeEl);
+    border-radius: var(--br-8);
+    margin: var(--mg-16) auto;
+    align-items: center;
+    gap: 8px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mainTitle {
+    font-family: "Hagrid", sans-serif;
+    font-weight: 600;
+    font-size: var(--fs-14);
+    background-color: var(--accent);
+    padding: var(--pd-4) var(--pd-8);
+    border-radius: 5px;
+    animation: zoomOut-zoomIn 2.5s infinite;
+}
+
+.contentText {
+    font-weight: 600;
+    font-size: var(--fs-14);
+}
+
+.contentLink {
+    font-weight: 600;
+    font-size: var(--fs-16);
+    padding: var(--pd-4) var(--pd-8);
+    color: var(--mainColor);
+    transition: all 0.3s ease;
+}
+
+.contentLink:hover {
+    font-family: "Hagrid", sans-serif;
+    background-color: var(--accent);
+    color: var(--themeEl);
+    border-radius: 5px;
+    animation: zoomOut-zoomIn 2.5s infinite;
+}
+
+/* ? End Daily Synaxarium Css */
+/* ! Start Responsive */
+/* * : Media Screen 768px */
 @media (max-width: 768px) {
- .verseSection {
+
+    /* ? verseSection  */
+    .container {
         margin: var(--mg-12) var(--mg-24);
     }
 
@@ -71,10 +133,22 @@
     .title {
         font-size: var(--fs-20);
     }
+
+    /* ? Daily Synaxarium */
+    .dailyContent {
+        display: block;
+        text-align: center;
+    }
+
+    .dot {
+        display: none;
+    }
 }
 
+/* * : Media Screen 480px */
+
 @media (max-width: 480px) {
-    .verseSection {
+    .container {
         margin: 0 var(--mg-24);
     }
 
@@ -91,4 +165,41 @@
         margin-left: var(--mg-16);
 
     }
+}
+
+/* * : Media Screen 350px */
+@media (max-width: 350px) {
+    /* ! Start Daily Verse Css*/
+    .container {
+        margin: 0 var(--mg-4);
+    }
+
+    .container:after {
+        width: 0.15rem;
+    }
+
+    .image {
+        width: 100px;
+    }
+
+    .title {
+        font-size: var(--fs-16);
+    }
+
+    .verse {
+        font-size: var(--fs-14);
+    }
+
+    /* * End Daily Verse CSS */
+    /* ! Start Daily Synaxarium Css*/
+    .dailyContent {
+        margin: var(--mg-4) auto;
+    }
+
+    .mainTitle,
+    .contentText,
+    .contentLink {
+        font-weight: 100;
+    }
+    /* * End Daily Synaxarium Css*/
 }

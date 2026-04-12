@@ -30,7 +30,7 @@ export const dailyContent: Record<string, DailyContent> = {
     },
 
     "apr-12": {
-    title: "البابا شنودة الثالث",
+    title: " نياحة البابا شنودة الثالث",
     images: [ "/assets/Hero/5.jpg", "/assets/Hero/6.jpg", "/assets/Hero/7.jpg"],
     video: "https://www.youtube.com/embed/zzzz",
       description: "هذا هو وصف المحتوى اليومي لليوم 12 أبريل. يمكن أن يتضمن هذا الوصف معلومات إضافية حول الحدث أو الشخص الذي يتم تسليط الضوء عليه في هذا اليوم."

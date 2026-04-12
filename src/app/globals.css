@@ -169,6 +169,7 @@ body {
   --themeEl: hsl(0, 0%, 0%);
   --mainColor: rgb(0, 123, 255);
   --mutedColor: hsl(0, 0%, 28%);
+  --accent: rgba(51, 94, 234, .1);
   /* ! Navbar color */
   --navBg: hsl(0, 0%, 100%);
   --navColor: rgb(0, 81, 255);
@@ -186,7 +187,6 @@ body {
   --searchColor: hsl(0, 0%, 28%);
   --inputButton: rgba(255, 255, 255, 0.7);
 
-  --accent: hsl(211, 100%, 50%);
   --hover-color: hsla(213, 14%, 52%, 0.102);
   --brBg: 1px solid rgba(0, 0, 0, 0.15);
   --bsBg: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -232,7 +232,6 @@ body.dark {
   --inputButton: hsla(0, 6%, 28%, 0.322);
   --inputButton-border: hsl(0, 4%, 26%);
 
-  --accent: hsl(61, 100%, 50%);
   --hover-color: hsla(229, 5%, 55%, 0.255);
   --navBg: hsla(225, 20%, 12%, 0.65);
   --brBg: 1px solid rgba(255, 255, 255, 0.08);
@@ -250,4 +249,12 @@ body.dark {
   --container-color: #05050c;
   --card-linear: linear-gradient(to left top, #000000c4, #001130);
   --text-gradient: linear-gradient(90deg, rgb(160, 158, 158), rgb(59, 59, 59));
+}
+
+@media (max-width:300px) {
+  *{
+    padding: 0;
+    margin: 0;
+    font-size: var(--fs-12);
+  }
 }
